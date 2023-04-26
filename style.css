@@ -1,0 +1,802 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contenedor-cabezera{
+    position:relative;
+    background: #0793DF;
+    padding: 20px;
+}
+
+.contenedor-correo{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.contenedor-correo p{
+    color: white;
+}
+
+.contenedor-redes{    
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 6px;
+}
+
+.contenedor-redes li{  
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.contenedor-menu{
+    position:relative;
+    padding:1.5em;
+    z-index: 20;
+}
+
+.contenedor-logo{
+    top: 0;
+    left: 0;
+}
+
+.inicio{
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    margin-right: 20px;
+}
+
+nav{
+    margin: auto;
+}
+
+.nav-menu{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-item{
+    border-right: solid;
+    border-color: rgba(12, 12, 170, 0.308);
+}
+.nav-menu li:last-child {
+    border-right: none;
+}
+
+.nav-menu > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: grey;
+    text-decoration: none;
+}
+
+.nav-menu > li :hover{
+    background: rgba(0,0,0,0.3);
+}
+
+.sub-menu{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background:rgba(0,0,0,0.3);
+}
+
+.menu-item-vertical, .nav-menu li:hover .sub-menu{
+   display: block;
+}
+
+.nav-menu li:hover{
+    background: rgba(0, 0, 0, 0.438);
+}
+
+
+.sub-menu li a{
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.contenedor-slider{
+    position: relative;
+    max-width: 5000px;
+    width: 100%;
+    height: 78vh;
+    overflow: hidden;
+}
+
+.carrusel{
+    display: flex;
+    transform: translate3d(0,0,0);
+    transition: all 1200ms;
+    animation-name: autoplay;
+    animation-duration: 12.5s;
+    animation-duration: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    width: 100%;
+    height: 100%;
+}
+
+.item-carrusel{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+.item-carrusel img{
+    max-width: 100%;
+}
+.pagination{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.pagination-item{
+    display: flex;;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 1200ms;
+    display: inline-block;
+}
+
+.pagination-item:hover{
+    transform: scale(2);
+}
+
+.pagination-item img{
+    display: inline-block;
+    max-width: none;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 1200ms;
+    object-fit: cover;
+}
+
+input[id="1"]:checked ~ .carrusel{
+    animation: none;
+    transform: translate3d(0,0,0);
+}
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
+    background: white;
+}
+
+input[id="2"]:checked ~ .carrusel{
+    animation: none;
+    transform: translate3d(calc(-100%*1),0,0);
+}
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
+    background: white;
+}
+
+input[id="3"]:checked ~ .carrusel{
+    animation: none;
+    transform: translate3d(calc(-100%*2),0,0);
+}
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
+    background: white;
+}
+
+@keyframes autoplay{
+    33%{
+        transform: translate3d(calc(-100%*0),0,0);
+    }
+
+    66%{
+        transform: translate3d(calc(-100%*1),0,0);
+    }
+
+    100%{
+        transform: translate3d(calc(-100%*2),0,0);
+    }
+}
+
+.conosenos{
+    width: 45%;
+    height: 35vh;
+    top: 0;
+    float: left;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+.contenedor-imagen-nosotros{
+    display: inline-block;
+    width: 45%;
+    margin-top: 25px;
+}
+
+.conosenos h1{
+    margin: 15px;
+    font-size: 1em;
+    padding-top: 20px;
+}
+
+.conosenos h2{
+    margin: 15px;
+    padding-left: 8px;
+    font-size: 2em;
+}
+.conosenos p{
+    margin: 15px;
+}
+
+.contenedor-obtendras{
+    padding-top: 15px;
+}
+.contenedor-obtendras h1
+{
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    text-align: center;
+}
+
+.contenedor{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    height: 30vh;
+    position: relative;
+}
+
+.contenedor figure{
+    position: relative;
+    height: 250px;
+    width:32%;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    cursor: pointer;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.contenedor figure img{
+    width: 100%;
+    height: 100%;
+    transition:  all 500ms ease-out;
+}
+
+.contenedor figure .capa{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 49, 58, 0.8);
+    transition:  all 500ms ease-out;    
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.contenedor figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor figure:hover > .capa h3{
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.contenedor figure .capa h3{
+    color: rgb(196, 196, 247);
+    font-weight: 400;
+    transition:  all 500ms ease-out;
+    margin-top: 30px;
+}
+
+.contenedor figure .capa p{
+    color: white;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+
+.contenedor-trabajamos{
+    width: 100%;
+    height: 70vh;
+    align-items: center;
+    text-align: center;
+}
+
+.contenedor-trabajamos h1{
+    font-size: 24px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+
+.item-trabajamos{
+    display: inline-block;
+    width: 32%;
+}
+
+.item-trabajamos img{
+    width: 80%;
+    height: 80%;
+    max-height: 40vh;
+}
+
+.item-trabajamos div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    height: 120px;
+    overflow: hidden;
+}
+
+.item-trabajamos button{
+    border-radius: 6px;
+    background: rgba(30, 30, 245, 0.856);
+    color: white;
+    font-size: 16px;
+    width: 120px;
+    height: 40px;
+}
+
+.item-trabajamos button:hover , .ayuda div button:hover{
+    border-radius: 6px;
+    background: rgba(21, 21, 109, 0.856);
+    color: white;
+    font-size: 16px;
+    width: 120px;
+    height: 40px;
+    transform: scale(1.2);/**hace mas grande*/
+}
+
+.item-trabajamos button i{
+    margin-right: 10px;
+}
+
+.ayuda{
+    position: relative;
+    width: 100%;
+    height: 30vh;
+}
+
+.ayuda img{
+    width: 100%;
+    height: 100%;
+}
+
+.ayuda div{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 69, 253, .6);
+    padding-left: 20px;
+}
+
+.ayuda div h2{ 
+    vertical-align: middle;
+    color: white;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.ayuda div p{ 
+    vertical-align: middle;
+    color: white;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.ayuda div button{ 
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    border-radius: 10px;
+    background: rgba(84, 173, 202, 0.596);
+    color: white;
+    font-size: 16px;
+    width: 120px;
+    height: 40px;
+}
+
+.servicios{
+    text-align: center;
+    padding: auto;
+    line-height: 1.5em;
+
+}
+.servicios h1{
+    margin-top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.servicios ul{
+    width: 100%;
+    height: 30vh;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.servicios li{
+    display: inline-block;
+    width: 30%;
+    height: 90%;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 20px;
+    position: relative;
+    place-items: center;
+}
+
+.servicio-imagen{
+    position: absolute;
+    top:40%;
+    left:1px;
+    width: 30%;
+    justify-content: center;
+    vertical-align: center;
+}
+
+.servicio-imagen i{
+    color:rgb(70, 69, 69);
+    font-size: 40px;
+}
+/*
+.servicio-imagen i:hover{
+    color:rgb(47, 0, 255);
+}
+*/
+.servicios-texto{
+    display: inline-block;
+    width: 55%;
+    max-width: 55%;
+    min-height: 60%;
+    margin-left: 30px;
+    margin-top: 50px;
+    max-height: 80%;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.servicios-texto h3{
+    text-align: left;
+    font-weight: bold;
+}
+
+.servicios-texto p{
+    text-align: left;
+}
+
+.beneficios{
+    width: 100%;
+    height: 25vh;
+    text-align: center;
+}
+
+.servicios li:hover> .servicio-imagen i{
+    color:rgb(47, 0, 255);
+    transform: scale(1.2) translateZ(0);
+}
+
+.servicios li:hover .servicios-texto h3{
+    color:rgb(47, 0, 255);
+}
+
+.contenedor-beneficios{
+    display: inline-block;
+    width: 35%;
+    height: 100%;
+    text-align: left;
+    overflow: hidden;
+}
+
+.contenedor-beneficios h1, .contenedor-beneficios p {
+    padding-left: 15px;
+}
+
+.contenedor-beneficios p{
+    padding-top: 10px;
+}
+
+.beneficios-desplegable{
+    position: relative;
+    display: inline-block;
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+    text-align: left;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
+}
+
+.beneficios-desplegable div{
+    padding-left: 15px;
+    border-radius: 6px;
+    height: 30px;
+    width: 96%;
+}
+
+
+.beneficios-desplegable label, .beneficios-desplegable h3{
+    width: 86%;
+    height: 100%;
+}
+
+.beneficios-desplegable h3, .beneficios-desplegable i{
+    display: inline-block;
+    cursor: pointer;
+}
+
+.multas1{
+    margin-top: 20px;
+}
+
+.multas1, .dinero1, .tiempo1{
+    width: 100%;
+    background: white;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.50);
+    cursor: pointer;
+    
+}
+
+.multas1:hover, .dinero1:hover, .tiempo1:hover{
+    background: rgb(24, 97, 233);
+    color: white;
+    transition:  all 500ms ease-out;
+}
+
+.multas2, .dinero2, .tiempo2{
+    visibility:hidden;
+    height: 1px;
+}
+
+
+.multas1:hover ~ .multas1 i{
+    visibility:hidden;
+}
+
+.multas1:hover ~ .multas2, .dinero1:hover ~ .dinero2, .tiempo1:hover ~ .tiempo2{
+    visibility:visible;;
+    height: 60px;
+    background: rgb(24, 97, 233);
+    margin-left: 10px;
+    margin-right: 40px;
+    color: white;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    width: 92%;
+}
+
+input[id="8"]:checked  ~ .multas1{
+    background: black;
+}
+
+.contenedor-paquetes{
+    padding-left: 15px;
+}
+
+.paquetes h2{
+    width: 90%;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.item-paquetes{
+    display: inline-block;
+    border-radius: 10px;
+    width: 28%;
+    height: 78vh;
+    overflow: hidden;
+    margin-right: 15px;
+    padding-top: 20px;
+    padding: 15px;
+    max-width: 400px;
+    line-height: 1.5;
+    box-shadow: 1px 5px 5px rgba(0,0,0,0.50);
+}
+
+.item-paquetes h3{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.item-paquetes .precio{
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(69,115,252,1) 0%, rgba(29,228,253,1) 60%, rgba(58,128,180,1) 94%);
+    height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.item-paquetes .informacio-paquete{
+    line-height: 2.5;
+}
+
+.item-paquetes:hover{
+    background: linear-gradient(90deg, rgba(69,115,252,1) 0%, rgba(29,180,253,1) 76%, rgba(58,128,180,1) 94%);
+    color: white;
+    transition:  all 500ms ease-out;
+}
+
+.item-paquetes:hover > .precio{
+    background: white;
+    color: black;
+}
+
+
+.datos{
+    position: relative;
+    width: 100%;
+    height: 16vh;
+    text-align: center;
+}
+
+.datos img{
+    width: 100%;
+    height: 100%;
+}
+
+.datos fieldset{ 
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 7, 26, 0.6);
+    gap: 8%;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.datos div{ 
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    width: 25%;
+    text-align: center;
+    max-width: 200px;
+}
+.datos div i{ 
+    font-size: 40px;
+    margin-top: 15px;
+}
+
+.datos div h2{ 
+    vertical-align: middle;
+    color: white;
+    font-size: 20px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+
+}
+
+.datos div p{ 
+    vertical-align: middle;
+    color: white;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.contenedor-contacto{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-contacto figure, .datos-contacto{
+    display: inline-block;
+    width: 48%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.datos-contacto{
+    padding: 10px;
+}
+
+form{
+    margin: 20px 0;/*expacio externo superior, inferior 40px, laterales 0*/
+}
+
+form label, form legend{
+    display: block;
+    font-size: 16px;
+    margin: 0 0 5px;/*inferior*/
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 10px;
+    padding: 10px 25px;
+    width: 80%;
+    border-radius: 6px;
+}
+
+select{
+    width: 55%;
+    font-size: 16px;
+    padding: 5px 0;
+    border-radius: 6px;
+}
+
+.datos-contacto select{
+    margin-bottom: 10px;
+    box-shadow: 1px 5px 5px rgba(0,0,0,0.50);
+}
+
+
+.datos-contacto textarea{
+    height: 60px;
+    box-shadow: 1px 5px 5px rgba(0,0,0,0.50);
+}
+
+.enviar{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(228, 222, 222);
+    background: rgb(7, 98, 218);
+    border: none;
+    border-radius: 15px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background: rgb(42, 39, 248);
+    transform: scale(1.05);/**hace mas grande*/
+     /*rotate(70deg);/*grados se pone en la misma linea para hacer 2 efectos*/
+}
+
+.contenedor-contacto figure img{
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+}
+
+
