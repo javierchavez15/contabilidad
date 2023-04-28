@@ -1,3 +1,5 @@
+*{box-sizing: border-box;}
+
 body{
     font-family: 'Montserrat', sans-serif;
 }
@@ -30,10 +32,15 @@ body{
     margin-left: 20px;
 }
 
+#check2{
+    opacity: 100%;
+    visibility:hidden;
+}
+
 .contenedor-menu{
     position:relative;
-    padding:1.5em;
-    z-index: 20;
+    padding:1em;
+    z-index: 20;/*se muestra sobre div*/
 }
 
 .contenedor-logo{
@@ -44,18 +51,40 @@ body{
 .inicio{
     position: absolute;
     top: 40%;
-    right: 10px;
-    margin-right: 20px;
+    right:5px;
+    margin-right: 10px;
 }
 
 nav{
-    margin: auto;
+    margin: 1px;
 }
+
+.enlace{
+    position: absolute;
+    padding: 1px;
+}
+
+.logo2{
+    height: 20px;
+    display: none;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #0793DF;
+    float: right;
+    line-height: 70px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.check2{display: none;}
 
 .nav-menu{
     list-style: none;
     display: flex;
-    justify-content: space-around;
+   /* justify-content: space-around;*/
 }
 
 .menu-item{
@@ -68,13 +97,18 @@ nav{
 
 .nav-menu > li > a{
     display: block;
-    padding: 15px 20px;
+    padding: 8px 5px;
     color: grey;
     text-decoration: none;
 }
 
+.nav-menu li a.active{
+    color: white;
+}/******************************/
+
 .nav-menu > li :hover{
     background: rgba(0,0,0,0.3);
+    color: white;
 }
 
 .sub-menu{
@@ -83,6 +117,7 @@ nav{
     list-style: none;
     width: 200px;
     background:rgba(0,0,0,0.3);
+    color: white;
 }
 
 .menu-item-vertical, .nav-menu li:hover .sub-menu{
@@ -91,6 +126,7 @@ nav{
 
 .nav-menu li:hover{
     background: rgba(0, 0, 0, 0.438);
+    color: white;
 }
 
 
@@ -150,7 +186,7 @@ nav{
     display: flex;;
     flex-direction: column;
     align-items: center;
-    border: 2px solid white;
+    border: 2px solid rgb(145, 144, 144);
     width: 16px;
     height: 16px;
     border-radius: 4px;
@@ -260,16 +296,20 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
 
 .contenedor{
     width: 100%;
-    height: 100%;
-    display: flex;
     height: 30vh;
     position: relative;
+    display: flex;
+    flex-direction: row;/*con :column justify-content: center;es  vertical*/
+    justify-content: space-around;/*distribuye los elementos center;/*x horizontal*/
+    align-items: center;/*y vertical*/
+    background-color: red;
 }
 
 .contenedor figure{
+    width:32%;
+    height: 250px;
     position: relative;
     height: 250px;
-    width:32%;
     overflow: hidden;
     border-radius: 6px;
     box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
@@ -442,7 +482,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
 
 .servicios ul{
     width: 100%;
-    height: 30vh;
+    height: 60vh;
     text-align: center;
     margin-top: 10px;
 }
@@ -450,7 +490,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
 .servicios li{
     display: inline-block;
     width: 30%;
-    height: 90%;
+    height: 45%;
     text-align: center;
     overflow: hidden;
     margin-top: 20px;
@@ -797,6 +837,274 @@ select{
     width: 100%;
     height: 100%;
     max-width: 600px;
+}
+
+@media (max-width:952px)
+{
+    .nav-menu > li > a{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:850px)
+{
+    .nav-menu > li > a{
+        font-size: 14px;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+    #check2{
+        opacity: 100%;
+        visibility:hidden;
+    }
+
+    .contenedor-menu{
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+    }
+    .inicio{
+        position: absolute;
+        top: 20px;
+        right: 5px;padding: 0;
+        margin: 0;
+    }
+    .menu{
+        margin: 0;
+        display: block;
+        position: flex;
+    }
+
+    .menu .nav-menu{
+        display: none;
+        position: flex;
+        width: 100%;
+        height: 50vh;        
+        background:rgba(0,0,0,0.8);
+        color: white;
+        top: 20px;
+        left:-2100%;
+        text-align: left;
+        transition:  all 0.5s;
+        padding: 0;
+        margin: 0;
+    }
+    .menu .nav-menu li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    .menu .nav-menu li a{
+        font-size: 20px;
+
+    }
+
+    .menu .nav-menu li a:hover, .menu .nav-menu li a.active{
+        background: none;
+        color:white;
+
+    }
+    #check2:checked ~ ul{
+        left: 0;
+        display: block;
+    }
+
+    .contenedor-slider{
+        margin-top: 15px;
+        height: 30vh;
+    }
+    .conosenos{
+        margin: 0 10px;
+        padding-top: 0;
+        height: 50vh;
+        width: 100%;
+        padding-right: 10px;
+        
+    }
+
+    .contenedor-imagen-nosotros{
+        width: 100%;
+        height: 100px;
+        height: 40vh;
+        margin-top: 0;
+        padding: 15px;
+    }
+    .contenedor-imagen-nosotros img{
+        margin-top: 20px;
+        width: 100%;
+        height: 250px;
+    }
+    .contenedor-obtendras{
+        text-align: center;
+        height: 80vh;
+    }
+
+    .contenedor {
+        margin-top: 35px;
+    }
+
+    .contenedor figure{
+        border-style: double;
+        width: 50%;
+    }
+
+    .contenedor-trabajamos{
+        height: 70vh;
+    }
+    .item-trabajamos{
+        height: 100%;
+    }
+
+    .item-trabajamos img{
+        height: 150px;
+    }
+
+    .item-trabajamos .texto-trabajamos{
+        height: 45%;
+        position: relative;
+        display: block;
+        text-align: left;
+    }
+
+    .item-trabajamos .texto-trabajamos h2{
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .item-trabajamos button{
+        padding: 0;
+        margin: 0;
+    }
+
+    .ayuda div p{ 
+        display: block;
+    }
+
+    .ayuda div button{ 
+        position: relative;
+        display: block;
+        top: 0;
+        right: 0;
+    }
+
+    .servicios ul{
+        width: 98%;
+        height: 86vh;
+        text-align: center;
+        margin-top: 5px;
+        margin: 0;
+        padding: 0;
+        margin-left: 5px;
+    }
+
+    .servicios li{
+        display: inline-block;
+        width: 49%;
+        height: 30%;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        place-items: center;
+    }
+    .servicio-imagen{
+        width: 40px;
+        height: 40px;
+    }
+    .servicio-imagen i{
+        color:rgb(70, 69, 69);
+        font-size: 28px;        
+    }
+
+    .servicios-texto{
+        display: line;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        max-height: 100%;
+        max-width: 95%;
+    }
+    .beneficios{
+        height: 50vh;
+        place-items: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+
+    .contenedor-beneficios{
+        margin-top: 15px;
+        display: block;
+        width: 100%; 
+        position: relative;
+        height: 46%;
+    }
+
+    .beneficios-desplegable{
+        position: flex;
+        display: block;
+        width: 100%;
+        height: 45%;
+        padding-left: 15%;
+        padding-top: 15px;
+    }
+
+    .beneficios-desplegable div{
+        width: 70%;
+    }
+    .beneficios-desplegable i{
+        padding-top: 5px;
+        padding-right: 5px;
+    }
+    .contenedor-paquetes{
+        width: 100%;
+        padding: 15px;
+        position: flex;
+        place-items: center;
+        align-items: center;
+        text-align: center;
+    }
+        
+    .item-paquetes{
+        display: block;
+        width: 100%;
+        max-width: 90%;
+        margin-left: 15px;
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    .item-paquetes .precio, .item-paquetes .informacio-paquete{
+        margin: 0;
+        padding:0 ;
+    }
+
+    .contenedor-contacto    {
+        display: block;
+        width: 100%;
+    }
+
+    .datos-contacto{
+        display: block;
+        width: 100%;
+    }
+
+    .datos-contacto h1{
+        font-size: 30px;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    .contenedor-contacto .imagen-contacto{
+        width: 100%;
+    }
 }
 
 
