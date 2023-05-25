@@ -38,72 +38,148 @@
                     </ul>
                 </div>
             </section>
-            <section class="contenedor-menu">
-                <div class="contenedor-logo">
-                    <img src="Imagenes/logo.png" class="imagen-logo" alt="imagen logo"  width="200" height="100"/>
-                </div>
-                <div class="inicio" >               
-                    <nav migration_allowed="1" migrated="0" role="navigation" class="menu">
-                        <input type="checkbox" name="check2" id="check2" >
-                        <label for="check2" class="checkbtn">
-                            <i class="fa-solid fa-bars" style="color: #0856dd;"></i>
-                        </label>
-                        <a href="#" class="enlace">
-                            
-                            
-                        </a>
-                        <ul class="nav-menu">
-                            <li class="menu-item">
-                                <a href="#inicio" aria-current="page" class="elementor-item elementor-item-active">Inicio</a>
+
+
+
+
+
+
+
+
+
+
+
+
+                    <nav class="nav">
+
+                        <div class="nav-conteiner">
+
+                                <img src="Imagenes/logo.png" alt="Logo" class="nav-title">
+
+                            <a href="#menu" class="nav-menu">
+                                <i class="fa-solid fa-bars" style="color: #000000;"></i>
+                            </a>
+
+                            <a href="" class="nav-menu-second">
+                                <i class="fa-regular fa-rectangle-xmark" ></i>
+                            </a>
+
+                        </div>
+
+                        <ul class="dropdown" id="menu">
+                            <li class="dropdown-list">
+                                <a href="" class="dropdown-link">
+                                    <i class="fa-solid fa-house" ></i>
+                                    <span class="dropdown-span">Inicio</span>
+                                </a>
+                                <div class="dropdown-content">
+                                    <ul class="dropdown-sub">
+                                        <li class="dropdown-li">
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li class="menu-item">
-                                <a href="#nosotros" aria-current="page" class="elementor-item elementor-item-anchor">Nosotros &#9660;</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item-vertical">
-                                        <a href="#valor" aria-current="page" class="elementor-sub-item elementor-item-anchor">Que obtienes con nosotros</a>
-                                    </li>
-                                    <li class="menu-item-vertical">
-                                        <a href="#beneficios" aria-current="page" class="elementor-sub-item elementor-item-anchor">Beneficios</a>
-                                    </li>
-                                </ul>
+
+
+                            <li class="dropdown-list">
+                                <a href="#nosotros" class="dropdown-link">
+                                    <i class="fa-solid fa-people-group"></i>
+                                    <span class="dropdown-span">Nosotros</span>
+                                    <i class="fa-solid fa-angle-down" id="voltear"></i>
+                                    <input type="checkbox" class="dropdown-check">
+                                </a>
+                                <div class="dropdown-content">
+                                    <ul class="dropdown-sub">
+                                        <li class="dropdown-li">
+                                            <a href="#valor" class="dropdown-anchor">Que obtienes con nosotros</a>
+                                        </li>
+                                        <li class="dropdown-li">
+                                            <a href="#beneficios" class="dropdown-anchor">Beneficios</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li class="menu-item">
-                                <a href="#servicios" aria-current="page" class="elementor-item elementor-item-anchor">Servicios &#9660;</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item-vertical">
-                                        <a href="#paquetes" aria-current="page" class="elementor-sub-item elementor-item-anchor">Paquetes contables</a>
-                                    </li>
-                                    <li class="menu-item-vertical">
-                                        <a href="#proceso" aria-current="page" class="elementor-sub-item elementor-item-anchor">¿Cómo contratarlos?</a>
-                                    </li>
-                                </ul>
+
+
+                            <li class="dropdown-list">
+                                <a href="#nosotros" class="dropdown-link">
+                                    <i class="fa-solid fa-id-card"></i>
+                                    <span class="dropdown-span">Servicios</span>
+                                    <i class="fa-solid fa-angle-down" id="voltear"></i>
+                                    <input type="checkbox" class="dropdown-check">
+                                </a>
+                                <div class="dropdown-content">
+                                    <ul class="dropdown-sub">
+                                        <li class="dropdown-li">
+                                            <a href="#valor" class="dropdown-anchor">Paquetes contables</a>
+                                        </li>
+                                        <li class="dropdown-li">
+                                            <a href="#beneficios" class="dropdown-anchor">¿Cómo contratarlos?</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li class="menu-item">
-                                <a href="#" aria-current="page" class="elementor-item elementor-item-active">Sitios de interés &#9660;</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item-vertical">
-                                        <a href="http://www.imss.gob.mx/" class="elementor-sub-item">IMSS</a>
-                                    </li>
-                                    <li class="menu-item-vertical">
-                                        <a href="https://portalmx.infonavit.org.mx/" class="elementor-sub-item">INFONAVIT</a>
-                                    </li>
-                                    <li class="menu-item-vertical">
-                                        <a href="https://www.sat.gob.mx/home" class="elementor-sub-item">SAT</a>
-                                    </li>
-                                    <li class="menu-item-vertical">
-                                        <a href="https://www.banxico.org.mx/" class="elementor-sub-item">BANCO DE MÉXICO</a>
-                                    </li>
-                                </ul>
+
+
+                            <li class="dropdown-list">
+                                <a href="#nosotros" class="dropdown-link">
+                                    <i class="fa-solid fa-laptop-file"></i>
+                                    <span class="dropdown-span">Sitios de interés</span>
+                                    <i class="fa-solid fa-angle-down" id="voltear"></i>
+                                    <input type="checkbox" class="dropdown-check">
+                                </a>
+                                <div class="dropdown-content">
+                                    <ul class="dropdown-sub">
+                                        <li class="dropdown-li">
+                                            <a href="http://www.imss.gob.mx/" class="dropdown-anchor" target="_blank" rel="noopener noreferrer">IMSS</a>
+                                        </li>
+                                        <li class="dropdown-li">
+                                            <a href="https://portalmx.infonavit.org.mx/" class="dropdown-anchor" target="_blank" rel="noopener noreferrer">INFONAVIT</a>
+                                        </li>
+                                        <li class="dropdown-li">
+                                            <a href="https://www.sat.gob.mx/home" class="dropdown-anchor" target="_blank" rel="noopener noreferrer">SAT</a>
+                                        </li>
+                                        <li class="dropdown-li">
+                                            <a href="https://www.banxico.org.mx/" class="dropdown-anchor" target="_blank" rel="noopener noreferrer">BANCO DE MÉXICO</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li class="menu-item">
-                                <a href="#contacto" aria-current="page" class="elementor-item elementor-item-anchor">Contacto</a>
+
+
+
+                            <li class="dropdown-list">
+                                <a href="" class="dropdown-link">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span class="dropdown-span">Contacto</span>
+                                </a>
+                                <div class="dropdown-content">
+                                    <ul class="dropdown-sub">
+                                        <li class="dropdown-li">
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
+
+
+
                         </ul>
-                    </nav>                         
-                </div>
-            </section>
+
+                    </nav>
+
+
+
+
+
+
+
+
+
+
         </header>
-        <main>
+        <main>  
+
+
             <section class="contenedor-slider">
 
                 <input type="radio" id="1" name="image-slider" hidden>
@@ -442,9 +518,11 @@
                         
                     </fieldset>
                 </div>   
-                <div class="contenedor-contacto">
+
+                <div class="contenedor-contacto" id="contacto">
+
                     <fieldset class="datos-contacto">
-                        <div>
+                       
                             <h1>Regístra tu cita y nos pondremos en contacto contigo</h1>
                             <form action="">
                                 <label for="nombreApellido">Nombre y Apellido</label>
@@ -489,18 +567,20 @@
                                 <input type="submit" value="Enviar" class="enviar">
                             </form>
     
-                        </div>
-                    </fieldset>    
-                    
+                            
+                    </fieldset> 
+
                     <figure class="imagen-contacto">
                         <img src="Imagenes/carrusel7.jpg" alt="">
                     </figure>
-                </div>
-                         
+                </div>   
+                   
             </section>
         </main>
+        
         <footer>
-
+            <p>©2023. Contabilidad</p>
+            <p><a href="">Politica de privacidad</a></p>
         </footer>
     </body>
 </html>
