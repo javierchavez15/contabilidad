@@ -1,0 +1,44 @@
+.nav{
+    background-color: blueviolet;
+
+    --img1 : scale(1);
+    --img2 : scale(0);
+}
+
+.nav:has(.dropdown:target){
+    --img1 : scale(0);
+    --img2 : scale(1);
+}
+
+.nav-conteiner{
+    width: 90%;
+    margin: 0 auto;
+    height: 70px;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-area: "title img";
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title{
+    color: white;
+    grid-area: title;
+}
+
+.nav-menu{
+    grid-area: img;
+    z-index: 10;
+    transform: var(--img1);
+}
+
+.nav-menu-second{
+    grid-area: img;
+    z-index: 10;
+    transform: var(--img2);
+}
+
+.nav-icon{
+    width: 30px;
+    display: block;
+}
