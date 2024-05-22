@@ -20,6 +20,23 @@ body{
 .contenedor-correo p{
     color: white;
 }
+.correo{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    color: black;
+    
+}
+
+.whatsapp{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    color: black;
+    margin-left: 20px;
+}
 
 .contenedor-redes{    
     position: absolute;
@@ -59,7 +76,7 @@ body{
 .nav-title{
     color: white;
     grid-area: title;
-    width: 140px;
+    width: 200px;
 }
 
 .nav-menu{
@@ -200,7 +217,7 @@ body{
 }
 .item-carrusel img{
     width: 100%;
-    max-width: 900px;
+    max-width: 99900px;
     height: 100%;
 }
 
@@ -272,6 +289,15 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     background: white;
 }
 
+input[id="4"]:checked ~ .carrusel{
+    animation: none;
+    transform: translate3d(calc(-100%*3),0,0);
+}
+
+input[id="4"]:checked ~ .pagination .pagination-item[for="4"]{
+    background: white;
+}
+
 @keyframes autoplay{
     33%{
         transform: translate3d(calc(-100%*0),0,0);
@@ -286,9 +312,15 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     }
 }
 
+.nosotros{
+
+    margin-top: 10px;
+    background-color: honeydew;
+}
+
 .conosenos{
     width: 45%;
-    height: 35vh;
+    height: 30vh;
     top: 0;
     float: left;
     overflow: hidden;
@@ -298,7 +330,15 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
 .contenedor-imagen-nosotros{
     display: inline-block;
     width: 45%;
-    margin-top: 25px;
+    max-width: 450px;
+    text-align: center;
+}
+
+.contenedor-imagen-nosotros img{    
+    width: 100%;
+    height: 250px;
+    max-width: 250px;
+    border-radius: 10px;
 }
 
 .conosenos h1{
@@ -335,7 +375,92 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     flex-direction: row;/*con :column justify-content: center;es  vertical*/
     justify-content: space-around;/*distribuye los elementos center;/*x horizontal*/
     align-items: center;/*y vertical*/
+    margin-bottom: 30px;
 }
+
+.contenedor-slider{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;/*con :column justify-content: center;es  vertical*/
+    justify-content: space-around;/*distribuye los elementos center;/*x horizontal*/
+    align-items: center;/*y vertical*/
+}
+
+.contenedor-slider figure{
+    width:100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+
+.contenedor-slider figure img{
+    width: 100%;
+    height: 100%;
+    transition:  all 500ms ease-out;
+    max-width: 1708px;
+    max-height: 617px;
+}
+
+.contenedor-slider figure .capa{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 49, 58, 0.8);
+    transition:  all 500ms ease-out;    
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    margin-top: 40px;
+    
+    max-width: 1708px;
+    max-height: 617px;
+    
+margin-left: auto;
+margin-right: auto;
+margin-top: 0;
+left: 0;
+right: 0;
+}
+
+
+.contenedor-slider figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contenedor-slider figure:hover > .capa h3{
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.contenedor-slider figure .capa h3{
+    color: rgb(196, 196, 247);
+    font-weight: 400;
+    transition:  all 500ms ease-out;
+    font-size: 30px;
+}
+
+.contenedor-slider figure .capa p{
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+
+
+
+
+
 
 .contenedor figure{
     width:32%;
@@ -354,6 +479,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     width: 100%;
     height: 100%;
     transition:  all 500ms ease-out;
+    border-radius: 6px;
 }
 
 .contenedor figure .capa{
@@ -417,6 +543,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     width: 80%;
     height: 80%;
     max-height: 40vh;
+    border-radius: 10px;
 }
 
 .item-trabajamos div{
@@ -454,6 +581,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     position: relative;
     width: 100%;
     height: 30vh;
+    margin-top: 40px;
 }
 
 .ayuda img{
@@ -741,7 +869,7 @@ input[id="8"]:checked  ~ .multas1{
 .datos{
     position: relative;
     width: 100%;
-    height: 16vh;
+    height: 26vh;
     text-align: center;
 }
 
@@ -751,6 +879,7 @@ input[id="8"]:checked  ~ .multas1{
 }
 
 .datos fieldset{ 
+
     position: absolute;
     display: flex;
     top: 0;
@@ -765,6 +894,7 @@ input[id="8"]:checked  ~ .multas1{
 }
 
 .datos div{ 
+    margin-top: 10px;
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -891,6 +1021,7 @@ select{
     height: 60%;
     max-width: 600px;
     margin-bottom: 10%;
+    border-radius: 10px;
 }
 
 footer{
@@ -946,7 +1077,7 @@ footer p a{
     .nav-title{
         color: white;
         grid-area: title;
-        width: 100px;
+        width: 140px;
     }
 
     .nav-menu{
@@ -1082,13 +1213,17 @@ footer p a{
         height: 40vh;
         margin-top: 0;
         padding: 15px;
+        align-items: center;
+        text-align: center;
     }
 
     .contenedor-imagen-nosotros img{
         margin-top: 20px;
         width: 100%;
         height: 250px;
+        max-width: 250px;
     }
+
     .contenedor-obtendras{
         text-align: center;
         height: 80vh;
